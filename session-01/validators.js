@@ -48,7 +48,27 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  return;
-}
+  let letterCounter = 0;
+  let numberCounter = 0;
+  let spCharCounter = 0;
+  let size = password.length;
+  if(size >= 10 && size <= 64){
+    for(let i = 0; i < size; i++){
+      if(isNumber(password[i])){
+        numberCounter ++;
+      };
+      if(isAlpha(password[i])){
+        letterCounter ++;
+      };
+      if(containsSpecialChars(password[i])){
+        spCharCounter ++;
+      };
+    };
+    if(numberCounter >=1 && letterCounter >=1 && spCharCounter>=1){
+      return true;
+    }
+  };
+  return false;
+};
 
 module.exports = { validUsername, validPassword };
