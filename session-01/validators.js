@@ -6,9 +6,40 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
-function validUsername(username) {
-  return;
+
+function containsSpecialChars(str) {
+  const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  return specialChars.test(str);
 }
+
+function isAlpha(c) {
+  return c.toLowerCase() != c.toUpperCase();
+}
+
+function isNumber(str){
+  return !isNaN(str);
+}
+
+function validUsername(username) {
+  let size = username.length;
+  if(containsSpecialChars(username)){
+    return false;
+  };
+  if(size >= 3 && size <= 10){
+    if(isAlpha(username[0])){
+      let counter = 0;
+      for(let i = 0; i < size; i++){
+        if(isNumber(username[i]) || isAlpha(username[i])){
+          counter++;
+        };
+      };
+      if(counter = size){
+        return true;
+      }
+    };
+  };
+  return false;
+};
 
 /*
   Write a function that returns true or false if the given password
