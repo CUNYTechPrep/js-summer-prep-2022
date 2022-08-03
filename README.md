@@ -18,8 +18,11 @@ After each session you can:
 - Pull the updates
   - `git pull`
 - Work on the exercises for the session
+  - To run tests locally run `npm install` once
+  - Run `npm test` to run the unit tests
+  - If you'd like to autorun tests as you code, you can run the command `npm test -- --watchAll`
 - Add, Commit, and Push your work to your own repo
   - `git add .`
   - `git commit -m '[your commit message here]'`
   - `git push`
-- To submit your work after the session, open a pull request from your repo back to the CUNYTechPrep/js-summer-prep-2022 repo [here](compare)
+- To submit your work after the session, open a pull request from your repo back to the CUNYTechPrep/js-summer-prep-2022 repo [here](https://github.com/CUNYTechPrep/js-summer-prep-2022/compare)
