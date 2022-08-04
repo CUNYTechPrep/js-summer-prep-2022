@@ -12,6 +12,9 @@ function validUsername(username) {
   let checkNumber = /\d/;
   let checkSpecial = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
+  let containsLetter = false;
+  let containsNumber = false;
+
   if (username.length >= 3 && username.length <= 10) {
     if (checkSpecial.test(username)) return false;
     if (checkNumber.test(username.charAt(0))) return false;
@@ -29,22 +32,22 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
+  // Check requirements variables
+  let checkLetter = /[A-Za-z]/;
+  let checkNumber = /\d/;
+  let checkSpecial = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+  let containsLetter = false;
+  let containsNumber = false;
+  let containsSpecial = false;
+
   if (password.length >= 10 && password.length <= 64) {
-    // Check requirements variables
-    let checkLetter = /[A-Za-z]/;
-    let checkNumber = /\d/;
-    let checkSpecial = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-
-    let containsLetter = false;
-    let containsNumber = false;
-    let containsSpecial = false;
-
     if (checkLetter.test(password)) containsLetter = true;
     if (checkNumber.test(password)) containsNumber = true;
     if (checkSpecial.test(password)) containsSpecial = true;
-
-    return containsLetter && containsNumber && containsSpecial;
   }
+
+  return containsLetter && containsNumber && containsSpecial;
 }
 
 module.exports = { validUsername, validPassword };
