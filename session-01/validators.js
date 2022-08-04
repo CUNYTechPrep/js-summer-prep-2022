@@ -12,9 +12,6 @@ function validUsername(username) {
   let checkNumber = /\d/;
   let checkSpecial = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
-  let containsLetter = false;
-  let containsNumber = false;
-
   if (username.length >= 3 && username.length <= 10) {
     if (checkSpecial.test(username)) return false;
     if (checkNumber.test(username.charAt(0))) return false;
