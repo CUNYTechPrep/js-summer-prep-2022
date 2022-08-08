@@ -17,20 +17,20 @@ function firstLetter(username){
 function specialCharacters(username){
   let spChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   if(spChars.test(username)) {
-    return false;
+    return true;
   }
 }
 
 function validUsername(username) {
   if(username.length < 3 || username.length > 10) {
     return false;
-}
-if(firstLetter(username)){
+} else if(firstLetter(username)){
+  return false;
+} else if (!username.match(/^[A-Z0-9]*$/i)){
+  return false;
+} else if (specialCharacters(username)){
   return false;
 }
-if (!username.match(/^[A-Z0-9]*$/i)) return false;
-
-if (username.match(/[^A-Z0-9]/i)) return false;
 
 return true;
 }
