@@ -6,10 +6,34 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
-function validUsername(username) {
-  return;
+
+function firstLetter(username){
+  let c = username.charAt(0);
+  if(c.toUpperCase() != c.toLowerCase() ){
+    return true;
+  }
 }
 
+function specialCharacters(username){
+  let spChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  if(spChars.test(username)) {
+    return false;
+  }
+}
+
+function validUsername(username) {
+  if(username.length < 3 || username.length > 10) {
+    return false;
+}
+if(firstLetter(username)){
+  return false;
+}
+if (!username.match(/^[A-Z0-9]*$/i)) return false;
+
+if (username.match(/[^A-Z0-9]/i)) return false;
+
+return true;
+}
 /*
   Write a function that returns true or false if the given password
   is valid according to the following rules:
