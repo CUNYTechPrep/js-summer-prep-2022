@@ -34,7 +34,6 @@ function validUsername(username) {
     else {
     return (false);
 }
-  return;
 }
 
 
