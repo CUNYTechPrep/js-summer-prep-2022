@@ -62,11 +62,3 @@ function validPassword(password) {
 
 module.exports = { validUsername, validPassword };
 
-
-let username = validUsername("hjfhjgf");
-
-console.log(username);
-
-let password = validPassword("668678658d#76578657865765");
-
-console.log(password);
