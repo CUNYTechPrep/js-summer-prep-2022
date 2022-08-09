@@ -6,9 +6,39 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
+
+    //check if string has a number
+    function hasNumber(str) {
+    return /\d/.test(str);
+    }
+
+  // function to check if char is a letter
+   function isCharacterALetter(char) {
+    return (/[a-zA-Z]/).test(char)
+}
+
+  //to check for special characters
+    function containsSpecialChars(str) {
+      const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+      return specialChars.test(str);
+    }
+
 function validUsername(username) {
+
+    let firstLetter = isCharacterALetter(username[0])
+    let checkSpecialChar = containsSpecialChars(username)
+    
+    if (username.length >= 3 && username.length <= 10 && firstLetter && checkSpecialChar == false){
+    return (true);
+    }
+    else {
+    return (false);
+}
   return;
 }
+
+
+
 
 /*
   Write a function that returns true or false if the given password
@@ -17,7 +47,26 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  return;
+    
+   let checkNumber = hasNumber(password);
+   let checkLetter = isCharacterALetter(password);
+   let checkSpecial = containsSpecialChars(password);
+    
+   if (password.length >= 10 && password.length <= 64 && checkNumber && checkLetter && checkSpecial){
+    return (true);
+    }
+    else {
+    return (false);  
+}
 }
 
 module.exports = { validUsername, validPassword };
+
+
+let username = validUsername("hjfhjgf");
+
+console.log(username);
+
+let password = validPassword("668678658d#76578657865765");
+
+console.log(password);
