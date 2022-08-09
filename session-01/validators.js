@@ -13,7 +13,6 @@ function validUsername(username) {
   let k = parseInt(username[0]);
   if (!isNaN(k)) { return false; }
 
-  //special character testing doesn't work.
   let r = /[~`!@.#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/;
   if (r.test(username)) { return false; }
   return true;
@@ -26,15 +25,15 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  //let rs = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~`!@.#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/;
   let regLetters = /ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz/;
   let regSpec = /[~`!@.#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/;
   let regNum = /1234567890/;
+
   if (password.length < 10 || password.length > 64) { return false; }
   if (!regLetters.test(password)
-      && !regSpec.test(password)
-      && !regNum.test(password)) {
-        console.log(password + " " + " returned false");
+    && !regSpec.test(password)
+    && !regNum.test(password)) {
+    console.log(password + " " + " returned false");
     return false;
   }
 
