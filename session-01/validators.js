@@ -6,7 +6,7 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
-function validator(username){
+function validUsername(username){
   fisrtPattern=/[a-zA-Z]/;
   secondPattern="^[^<>{}\"/|;:.,~!?@#$%^=&*\\]\\\\()\\[¿§«»ω⊙¤°℃℉€¥£¢¡®©_+]*$";
  
