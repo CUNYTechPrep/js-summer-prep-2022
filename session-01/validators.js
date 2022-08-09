@@ -10,8 +10,8 @@
 //Function to detect a special character in the username
 function hasSpecialCharacter(username){
   const array = ['!','@','#','$','%','^','&','*','(',')','/','<','>','?','{','}','[',']',';',':','"','|'];
-  for(let i =0; i<username.length(); i++){
-    for(let n =0; n<array.length(); n++){
+  for(let i =0; i<username.length; i++){
+    for(let n =0; n<array.length; n++){
       if(array[n]===username[i]){
         return true;
       }
@@ -23,8 +23,8 @@ function hasSpecialCharacter(username){
 //Function to detect a letter in username
 function hasLetter(username){
   const array2 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-  for(let i =0; i<username.length(); i++){
-    for(let n =0; n<array2.length(); n++){
+  for(let i =0; i<username.length; i++){
+    for(let n =0; n<array2.length; n++){
       if(array2[n]===username[i]){
         return true;
       }
@@ -36,8 +36,8 @@ function hasLetter(username){
 //Function to detect if username has numbers
 function hasNumbers(username){
   const array3 = ['0','1','2','3','4','5','6','7','8','9'];
-  for(let i =0; i<username.length(); i++){
-    for(let n =0; n<array2.length(); n++){
+  for(let i =0; i<username.length; i++){
+    for(let n =0; n<array2.length; n++){
       if(array3[n]===username[i]){
         return true;
       }
@@ -50,7 +50,7 @@ function hasNumbers(username){
 function firstIsLetter(username){
   const array4 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
-  for(let i =0; i<username.length(); i++){
+  for(let i =0; i<username.length; i++){
     if(array3[0]===username[i]){
         return true;
     }
@@ -67,7 +67,7 @@ function validUsername(username) {
         console.log("Name can't be blank!");
         return false;
   
-  }else if(username.length()<3 || username.length()>10)
+  }else if(username.length<3 || username.length>10)
   {
     console.log("Username must be between 3-10 characters long!");
     return false;
@@ -94,8 +94,8 @@ function validUsername(username) {
   function hasLetterSpecCharNumber(password){
     function hasSpecialCharacter(password){
       const array5 = ['!','@','#','$','%','^','&','*','(',')','/','<','>','?','{','}','[',']',';',':','"','|'];
-      for(let i =0; i<[password].length(); i++){
-        for(let n =0; n<array5.length(); n++){
+      for(let i =0; i<[password].length; i++){
+        for(let n =0; n<array5.length; n++){
           if(array5[n]===password[i]){
             return true;
           }
@@ -106,8 +106,8 @@ function validUsername(username) {
   }
   function hasLetter(password){
     const array6 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-    for(let i =0; i<password.length(); i++){
-      for(let n =0; n<array6.length(); n++){
+    for(let i =0; i<password.length; i++){
+      for(let n =0; n<array6.length; n++){
         if(array6[n]===password[i]){
           return true;
         }
@@ -117,8 +117,8 @@ function validUsername(username) {
   }
   function hasNumbers(password){
     const array7 = ['0','1','2','3','4','5','6','7','8','9'];
-    for(let i =0; i<password.length(); i++){
-      for(let n =0; n<array7.length(); n++){
+    for(let i =0; i<password.length; i++){
+      for(let n =0; n<array7.length; n++){
         if(array7[n]===password[i]){
           return true;
         }
