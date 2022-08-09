@@ -25,15 +25,14 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  let regLetters = /ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz/;
+  let regLetters = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]/;
   let regSpec = /[~`!@.#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/;
-  let regNum = /1234567890/;
+  let regNum = /[1234567890]/;
 
   if (password.length < 10 || password.length > 64) { return false; }
   if (!regLetters.test(password)
-    && !regSpec.test(password)
-    && !regNum.test(password)) {
-    console.log(password + " " + " returned false");
+    || !regSpec.test(password)
+    || !regNum.test(password)) {
     return false;
   }
 
