@@ -5,7 +5,8 @@ const fruits = ["apple", "banana", "coconut", "durian"];
 // While loop
 // let i = 0;
 // while (i < fruits.length) {
-//   console.log(fruits[0]);
+//   console.log(fruits[i]);
+//   i++;
 // }
 
 // for (let i = 0; i < fruits.length; i++) {
@@ -13,8 +14,8 @@ const fruits = ["apple", "banana", "coconut", "durian"];
 //   console.log(fruit);
 // }
 
-// for (const item of fruits) {
-//   console.log(item);
+// for (const fruit of fruits) {
+//   console.log(fruit);
 // }
 
 // 🚫 avoid for-in loops
@@ -22,10 +23,22 @@ const fruits = ["apple", "banana", "coconut", "durian"];
 //   console.log(item);
 // }
 
-// fruits.forEach
+function fruitPrint(fruit) {
+  console.log("Delicious: ", fruit);
+}
+
+fruits.forEach(fruitPrint);
+fruits.forEach((fruit) => {
+  console.log(fruit);
+});
 
 // callbacks
 
 // .map
+const pluralFruits = fruits.map(function (value) {
+  return value + "s";
+});
+console.log(pluralFruits);
+console.log(fruits);
 
 // .filter

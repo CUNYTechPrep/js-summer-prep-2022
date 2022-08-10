@@ -1,4 +1,4 @@
-const { transformArrayToUpper } = require("./exercise.js");
+const { transformArrayToUpper, sumOfAllAges } = require("./exercise.js");
 
 describe("transformArrayToUpper()", () => {
   test('should convert ["abc"] to ["ABC"]', () => {
