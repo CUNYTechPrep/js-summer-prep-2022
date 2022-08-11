@@ -7,6 +7,7 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
+
     //check length using built in string len 
     username = username.toLowerCase()
     const lowerLength = 3
@@ -42,6 +43,10 @@ function validUsername(username) {
 
     return true;
 
+    
+
+
+
 
 }
 
@@ -52,15 +57,16 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 
+
 function validPassword(password) {
     password = password.toLowerCase(); //convert to lowercase before processing
 
     //function to check length
-    let validLength = function(string, lower, upper) {
-            return (string.length >= lower) && (string.length <= upper);
-        }
-        //function to check for special characters
-    let hasSpecialChar = function(string) {
+    let validLength = function (string, lower, upper) {
+        return (string.length >= lower) && (string.length <= upper);
+    }
+    //function to check for special characters
+    let hasSpecialChar = function (string) {
         for (let i = 0; i < string.length; i++) {
             if (!(string.charCodeAt(i) > 96 && string.charCodeAt(i) < 123) && !(string.charCodeAt(i) > 47 && string.charCodeAt(i) < 58)) {
                 return true; //return true on first non-alphanumeric character
@@ -71,7 +77,7 @@ function validPassword(password) {
     }
 
     //function to check for letter character
-    let hasLetter = function(string) {
+    let hasLetter = function (string) {
         for (let i = 0; i < string.length; i++) {
             if (string.charCodeAt(i) > 96 && string.charCodeAt(i) < 123) {
                 return true; //return true on first letter
@@ -83,7 +89,7 @@ function validPassword(password) {
     }
 
     //function to check number
-    let hasNumber = function(string) {
+    let hasNumber = function (string) {
         for (let i = 0; i < string.length; i++) {
             if (string.charCodeAt(i) > 47 && string.charCodeAt(i) < 58) {
                 return true; //return true on first number
@@ -113,7 +119,75 @@ function validPasswordRegex(password) {
   return (validLength(password, 10, 64), testRegExp(specialChars, password) && testRegExp(alphaChars, password) && testRegExp(NumChars, password)) ? true : false
 
 
+=======
+// function validPasswordRegex(password) {
+//   password = password.toLowerCase() //convert to lower case before processing
+//   const specialChars = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/) //regular expression for special characters
+//   const alphaChars = new RegExp(/[a-z]/) //regular expression for letters
+//   const NumChars = new RegExp(/[0-9]/)  //regular expression for numbers
+
+//   //arrow function testing for alpha-numeric characters usign regular expression and "test function"
+//   //test-> returns true if string contains characters in regular expression and false otherwise
+//   let testRegExp = (regExpression, string) => regExpression.test(string)
+//   //return true if string has least 1 letter, 1 number, and 1 special character
+//   return (testRegExp(specialChars, password) && testRegExp(alphaChars, password) && testRegExp(NumChars, password)) ? true : false
+
+
+// }
+
+
+
+
+function validPassword(password) {
+
+  password = password.toLowerCase() //convert to lowercase before processing
+
+  //function to check for special characters
+  let hasSpecialChar = function (string) {
+    for (let i = 0; i < string.length; i++) {
+      if (!(string.charCodeAt(i) > 96 && string.charCodeAt(i) < 123) && !(string.charCodeAt(i) > 47 && string.charCodeAt(i) < 58)) {
+        return true //return true on first non-alphanumeric character
+      }
+    }
+
+    return false
+  }
+
+
+
+
+  let hasLetter = function (string) {
+    for (let i = 0; i < string.length; i++) {
+      if (string.charCodeAt(i) > 96 && string.charCodeAt(i) < 123) {
+        return true   //return true on first letter
+      }
+    }
+
+    return false
+
+  }
+
+  let hasNumber = function (string) {
+    for (let i = 0; i < string.length; i++) {
+      if (string.charCodeAt(i) > 47 && string.charCodeAt(i) < 58) {
+        return true //return true on first number
+      }
+    }
+    return false
+  }
+
+
+  return hasLetter(password) && hasNumber(password) && hasSpecialChar(password) //return true if contains 1 letter, 1 number, 1 special character
+  
+>>>>>>> ab3d9f31f8fd81f4a57bef90e6b6552e09cecad2
 }
 */
 
+
+
+
 module.exports = { validUsername, validPassword };
+
+
+
+
