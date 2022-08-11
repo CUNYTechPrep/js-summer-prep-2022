@@ -3,7 +3,9 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  //use for each or map
+  //structure that transforms in place?
+  return listOfStrings.map(string => string.toUpperCase())
 }
 
 /*
@@ -16,7 +18,16 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+
+  //use filter (get valid elements)
+  //use map (get ages)
+  //use reduce (get sum)
+  return listOfStudentObjects.filter(item => 'age' in item).map(item=>item.age).reduce((sum,item)=>sum+item,0)
+ 
+  
 }
+
+let arr = ["cat", "hat"]
+console.log(transformArrayToUpper(arr))
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

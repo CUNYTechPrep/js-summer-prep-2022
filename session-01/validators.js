@@ -179,7 +179,7 @@ function validPassword(password) {
 
   return hasLetter(password) && hasNumber(password) && hasSpecialChar(password) //return true if contains 1 letter, 1 number, 1 special character
   
->>>>>>> ab3d9f31f8fd81f4a57bef90e6b6552e09cecad2
+
 }
 */
 
