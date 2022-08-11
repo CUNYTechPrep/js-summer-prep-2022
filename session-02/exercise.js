@@ -17,6 +17,7 @@ function transformArrayToUpper(listOfStrings) {
 */
 function sumOfAllAges(listOfStudentObjects) {
   return;
+  //hi-
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
