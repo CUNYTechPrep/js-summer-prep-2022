@@ -19,7 +19,7 @@ function validUsername(username) {
     if(letter>="a" && letter<="z") continue;
     if(letter>="A" && letter<="Z") continue;
     if(letter>="0" && letter<="9") continue;
-    return false;
+   return false;
   }
   return true;
 }
