@@ -8,12 +8,12 @@
 
 **Is the solution complete?**
 
-[Yes/No]
+[Yes]
 
 **Did you run into any problems?**
 
-[Describe...]
+[No:"comfort zone"]
 
 **Did you collaborate with others on this solution?**
 
-<!-- Provide github usernames -->
+No.

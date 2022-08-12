@@ -1,4 +1,4 @@
-/*
+
   Write a function that returns true or false if the given username
   is valid according to the following rules:
   - username must be between (and including) 3-10 characters in length
