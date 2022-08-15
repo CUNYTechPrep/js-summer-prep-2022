@@ -3,8 +3,23 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  if(listOfStrings.length <1){
+    return[];
+  };
+let newArr = [];
+let newWord= "";
+
+for(let i =0; i< listOfStrings.length; i++){
+  newWord ="";
+  for(let a = 0; a< listOfStrings[i].length; a++){
+     newWord = newWord + listOfStrings[i].charAt(a).toUpperCase();
+  }
+  newArr.push(newWord);
 }
+  return newArr;
+}
+
+
 
 /*
   Write a function that returns the sum of all student ages.
@@ -16,7 +31,19 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  let sumAge = 0;
+for(let i =0; i< listOfStudentObjects.length; i++){
+  if(Object.keys(listOfStudentObjects[i]).length<1){
+    continue;
+  }
+  else{
+    if(listOfStudentObjects[i].age){
+        sumAge = sumAge + listOfStudentObjects[i].age;
+      }
+  }
 }
+return sumAge;
+}
+
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
