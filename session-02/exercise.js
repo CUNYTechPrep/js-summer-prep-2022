@@ -3,7 +3,8 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  const new_list = listOfStrings.map(list => list.toUpperCase());
+  return new_list;
 }
 
 /*
@@ -16,7 +17,13 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  let sum = 0;
+  for(let i = 0; i < listOfStudentObjects.length; i++){
+    for(let j = 0; j <listOfStudentObjects[i]["age: "].length; j++){
+      sum += listOfStudentObjects[i].age;
+    }
+  }
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
