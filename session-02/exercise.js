@@ -23,8 +23,8 @@ function transformArrayToUpper(listOfStrings) {
 function sumOfAllAges(listOfStudentObjects) {
   let sum = 0;
   for (const student of listOfStudentObjects) {
-    if (!listOfStudentObjects.age) continue;
-    sum += listOfStudentObjects.age;
+    if (!student.age) continue;
+    sum += student.age;
   }
   return sum;
 }
