@@ -59,7 +59,7 @@ function validPassword(password) {       //password must be between (and includi
 
 
 
-let numberCount = 0;             //password must contain at least 1 number
+let numberCount = 0;               //password must contain at least 1 number
 for (let i=0; i<password.length; i++){
   let letter = password[i];
   if(letter >= "0" && letter<= "9")  numberCount++;
@@ -89,12 +89,12 @@ for (let i=0; i<password.length; i++){
 
 if (specialCount === 0) return false;
 
-
-
-
+return true;
 }
 
 
+
+//testing
 module.exports = { validUsername, validPassword };
 
 
