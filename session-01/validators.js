@@ -55,7 +55,7 @@ function validUsername(username){
 */
 
 function validPassword(password) {       //password must be between (and including) 10-64 characters in length
-  if (password.length <10 || password.length <64 ) return false;
+  if (password.length <10 || password.length >64 ) return false;
 
 
 
