@@ -41,4 +41,8 @@ describe("sumOfAllAges()", () => {
       sumOfAllAges([{ name: "Sandra", age: 31 }, {}, { name: "Didi", age: 20 }])
     ).toBe(51);
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> upstream/main
