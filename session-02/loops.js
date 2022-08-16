@@ -27,10 +27,10 @@ function fruitPrint(fruit) {
   console.log("Delicious: ", fruit);
 }
 
-fruits.forEach(fruitPrint);
-fruits.forEach((fruit) => {
-  console.log(fruit);
-});
+// fruits.forEach(fruitPrint);
+// fruits.forEach((fruit) => {
+//   console.log(fruit);
+// });
 
 // callbacks
 
