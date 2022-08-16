@@ -2,8 +2,11 @@
   Transform the input array of strings into uppercase strings
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
-function transformArrayToUpper(listOfStrings) {
-  return;
+function transformArrayToUpper(listOfStrings) { // this works now
+  return listOfStrings.map(element => {
+    return element.toUpperCase();
+  });
+   
 }
 
 /*
@@ -16,7 +19,18 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  let sumAge = 0;
+
+  for (let i = 0; i < listOfStudentObjects.length; i++)
+  {
+    if (listOfStudentObjects[i].age === undefined )
+    {
+      sumAge+=0;
+    }
+    else   {sumAge += listOfStudentObjects[i].age;}
+  }
+
+  return sumAge;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

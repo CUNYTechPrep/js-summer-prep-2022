@@ -23,7 +23,7 @@ const fruits = ["apple", "banana", "coconut", "durian"];
 //   console.log(item);
 // }
 
-function fruitPrint(fruit) {
+/*function fruitPrint(fruit) {
   console.log("Delicious: ", fruit);
 }
 
@@ -31,7 +31,7 @@ fruits.forEach(fruitPrint);
 fruits.forEach((fruit) => {
   console.log(fruit);
 });
-
+*/
 // callbacks
 
 // .map
