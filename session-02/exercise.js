@@ -27,21 +27,6 @@ function sumOfAllAges(listOfStudentObjects) {
   }
   return sum;
   
-  
-  // for (let index = 0; index < listOfStudentObjects.length; index++){
-  //   sum += listOfStudentObjects[index].age;
-  // }
-  // return sum;
-
-  // const sum = listOfStudentObjects.reduce((accumulator, object) => {
-  //   return accumulator + object.age;
-  // }, 0);
-
-  // return sum;
-
-  
-
-  
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
