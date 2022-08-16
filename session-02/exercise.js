@@ -1,9 +1,13 @@
+// Chynna Starr
+// 08/16/2022
+// Summer Prep Assignment 2
+
 /*
   Transform the input array of strings into uppercase strings
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  return listOfStrings.map(word => word.toUpperCase());
 }
 
 /*
@@ -16,7 +20,13 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  let sum = 0;
+  for (student of listOfStudentObjects) {
+    if ('age' in student) {
+      sum += student.age;
+    }
+  }
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
