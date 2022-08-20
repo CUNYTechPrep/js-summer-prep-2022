@@ -1,11 +1,14 @@
 const { transformArrayToUpper, sumOfAllAges } = require("./exercise.js");
 
+// describe(stringDescriptionOfTheGroupOfTests, functionThatHoldsTests)
+// test(stringDescription, functionThatDoesTheTest)
+
 describe("transformArrayToUpper()", () => {
   test('should convert ["abc"] to ["ABC"]', () => {
     expect(transformArrayToUpper(["abc"])).toEqual(["ABC"]);
   });
 
-  test('should convert ["apple", "banana", "coconut"] to ["ABC"]', () => {
+  test('should convert ["apple", "banana", "coconut"] to ["APPLE", "BANANA", "COCONUT",]', () => {
     expect(transformArrayToUpper(["apple", "banana", "coconut"])).toEqual([
       "APPLE",
       "BANANA",
