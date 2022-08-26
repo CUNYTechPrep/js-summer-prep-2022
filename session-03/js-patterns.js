@@ -3,6 +3,7 @@
 //    ||, returns left if true, otherwise right
 //    &&, if left true then returns right, otherwise returns left
 
+
 // || for default values
 function welcomeMessage(userInputName) {
   // if (!userInputName) {
