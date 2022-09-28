@@ -4,7 +4,9 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, edited]
+  pull_request_target:
+    types: [assigned, opened, synchronize, reopened, edited]
 
 jobs:
   build:
