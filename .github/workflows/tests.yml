@@ -2,9 +2,7 @@ name: Tests
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, edited]
-  pull_request_target:
-    types: [assigned, opened, synchronize, reopened, edited]
+    types: [opened, synchronize, reopened, edited, assigned]
 
 jobs:
   build:
