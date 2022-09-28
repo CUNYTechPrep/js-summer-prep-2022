@@ -3,6 +3,7 @@ name: Tests
 on:
   pull_request:
     types: [opened, synchronize, reopened, edited, assigned]
+  workflow_dispatch:
 
 jobs:
   build:
