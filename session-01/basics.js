@@ -134,7 +134,6 @@ console.log(34 !== 45);
 // } else if (conditional) {
 // } else {
 // }
-
 /***** Looping *****/
 // For loops
 let schoolName = "Baruch";
