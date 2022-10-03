@@ -7,7 +7,19 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  return;
+    const numbers = /[0-9]/gi;
+    const specialChars = /[^\w]/gi;
+    const alphanumeric = /^[A-Za-z0-9]+$/gi;
+
+    if(username.length > 10 || username.length < 3) {
+      return false;
+    } else if(numbers.test(username.charAt(0))) {
+      return false;
+    } else if(specialChars.test(username)) {
+      return false;
+    } else{
+      return alphanumeric.test(username);
+    }
 }
 
 /*
@@ -17,7 +29,14 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  return;
+  if(password.length < 10 || password.length > 64){
+    return false;
+  }
+
+  if(!password.match(/^(?=.*[a-zA-Z]) (?=.*\d) (?=.*[!@#$%^&*()_+])/)){
+    return false;
+  }
+  return true;
 }
 
 module.exports = { validUsername, validPassword };
