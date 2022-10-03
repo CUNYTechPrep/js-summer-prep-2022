@@ -3,13 +3,13 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  let a = [];
-  for (let i = 0; i < listOfStrings.length; i++) {
-    a.push(listOfStrings[i].toUpperCase());
-  }
-  return a;
+  return;
+    let a=[];
+    for(let i=0; i<listOfStrings.length; i++){
+      a[i]=listOfStrings[i].toUpperCase();
+    }
+    return a;
 }
-
 /*
   Write a function that returns the sum of all student ages.
   The function will be passed an array of objects and the result
