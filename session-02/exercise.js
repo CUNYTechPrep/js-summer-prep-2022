@@ -2,8 +2,20 @@
   Transform the input array of strings into uppercase strings
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
+
+
+/*
+    @Adam
+    I created a simple for loop that saves each value we pass through the array with the
+    uppercase version of the array.
+ */
 function transformArrayToUpper(listOfStrings) {
-  return;
+
+   for (let i = 0; i < listOfStrings.length; i++) {
+     listOfStrings[i] = listOfStrings[i].toUpperCase();
+   }
+
+  return listOfStrings;
 }
 
 /*
@@ -15,8 +27,21 @@ function transformArrayToUpper(listOfStrings) {
     [{ name: 'Sandra', age: 31 }, {}, { name: 'Didi', age: 20}]
     the function should return 51
 */
+
+
+/*
+    Using the ternary operator, we can simplify this function's math by looping through
+    the array and adding values to a sum with the sum. We utilize the "Has own" operator to justify whether a person's age is added.
+ */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+
+  let sum = 0;
+
+  for (let i = 0; i < listOfStudentObjects.length; i++) {
+   sum = Object.hasOwn(listOfStudentObjects[i],"age") ? sum += listOfStudentObjects[i].age : sum += 0;
+  }
+
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
