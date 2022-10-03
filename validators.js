@@ -1,5 +1,5 @@
-let letter = /[A-za-z]/;
-let number = /[0-9]/;
+let letter = [A-za-z];
+let number = [0-9];
 var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
 /*
   Write a function that returns true or false if the given username
@@ -10,8 +10,8 @@ var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
   - username cannot contain special characters
 */
 function validUsername(username) {
-  if(username.lenght < 3  || username.lenght >10){
-    return false;
+  if((username.lenght >= 3 ) || (username.lenght <= 10)){
+    return true;
   }
 
   if(username.lenght === 1 && username.match(letter) ){
@@ -40,8 +40,8 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  if(password.lenght < 10 || password.lenght > 64){
-    return false;
+  if((password.lenght >= 10) && (password.lenght <= 64)){
+    return true;
   }
   if((password === letter) && (password === number) && (password === specialCharacters)){
     return true
